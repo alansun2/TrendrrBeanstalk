@@ -65,7 +65,7 @@ public class BeanstalkPool {
      *
      * @return
      */
-    public synchronized BeanstalkClient getClient() throws BeanstalkException {
+    public synchronized BeanstalkClient getClient() {
         /*
          * synchronized, but should be fast as the client initialization code happens lazily.
          */

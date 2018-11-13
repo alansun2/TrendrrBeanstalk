@@ -3,7 +3,7 @@ package com.trendrr.beanstalk;
 /**
  * @author dustin
  */
-public class BeanstalkException extends Exception {
+public class BeanstalkException extends RuntimeException {
 
     /**
      *
