@@ -20,15 +20,15 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/dustismo/TrendrrBeanstalk.git</connection>
-    <developerConnection>scm:git:git@github.com:dustismo/TrendrrBeanstalk.git</developerConnection>
-    <url>http://github.com/dustismo/TrendrrBeanstalk</url>
-    <tag>HEAD</tag>
+    <connection>scm:git:git://github.com/alansun2/TrendrrBeanstalk.git</connection>
+    <developerConnection>scm:git:git@github.com:alansun2/TrendrrBeanstalk.git</developerConnection>
+    <url>http://github.com/alansun2/TrendrrBeanstalk</url>
+    <tag>y</tag>
   </scm>
 
   <issueManagement>
     <system>github</system>
-    <url>http://github.com/dustismo/TrendrrBeanstalk/issues</url>
+    <url>http://github.com/alansun2/TrendrrBeanstalk/issues</url>
   </issueManagement>
 
   <properties>
