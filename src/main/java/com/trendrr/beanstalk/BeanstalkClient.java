@@ -180,6 +180,10 @@ public class BeanstalkClient {
         }
     }
 
+    public long put(long priority, int delay, int ttr, String data) throws BeanstalkException {
+        return put(priority, delay, ttr, data.getBytes());
+    }
+
     /**
      * Puts a task into the currently used queue (see {@link #useTube(String)}.
      *
