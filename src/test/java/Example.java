@@ -26,7 +26,8 @@ public class Example {
         //Example usage for a
 
         try {
-            clientExample();
+//            clientExample();
+            pooledExample();
         } catch (BeanstalkException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -63,7 +64,7 @@ public class Example {
 
 
     public static void pooledExample() throws BeanstalkException {
-        BeanstalkPool pool = new BeanstalkPool("localhost", 8010,
+        BeanstalkPool pool = new BeanstalkPool("test.ehoo100.com", 8010,
                 30, //poolsize
                 "example" //tube to use
         );
@@ -75,6 +76,12 @@ public class Example {
         BeanstalkJob job = client.reserve(60);
         log.info("GOt job: " + job);
         client.deleteJob(job);
+//        client.close();  //returns the connection to the pool
+        client = pool.getClient();
+        client.put(1l, 0, 5000, "this is some data1".getBytes());
+        BeanstalkJob job1 = client.reserve(60);
+        log.info("GOt job: " + job1);
+        client.deleteJob(job1);
         client.close();  //returns the connection to the pool
     }
 }
